@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -18,4 +18,203 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* ------------ Portfolio ------------- */
+/* ------------ Portfolio ------------- */
+/* ------------ Portfolio ------------- */
+
+:root {
+  --primary-color: #e3eaff;
+  --secondary-color: #212121;
+  --third-color: white;
+  --accent: hsl(153, 93%, 33%);
+  --input-bg: #d3d7d8;
+  --input-color: #333;
+}
+
+.dark {
+  --primary-color: #000311;
+  --secondary-color: #fff;
+  --third-color: rgb(128, 79, 79);
+  --accent: hsl(153, 71%, 59%);
+  --input-bg: #444242;
+  --input-color: #ddd;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  gap: 50px;
+  padding: 30px;
+}
+
+.portfolio .my-works {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.my-works .two-works {
+  display: flex;
+  gap: 50px;
+}
+
+.two-works .my-work img {
+  width: 100%;
+}
+
+.my-work img {
+  width: 100%;
+}
+
+/* desktop design greater than 1000px */
+.my-work {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  position: relative;
+}
+
+.my-work img {
+  cursor: context-menu;
+}
+
+.my-work .work-info h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.work-info .use {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.my-work ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+  position: absolute;
+  top: 40%;
+  visibility: hidden;
+}
+
+.my-work:hover ul {
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.my-work:hover img {
+  opacity: 0.2;
+  transition: all 0.5s;
+}
+
+.my-work ul li a {
+  text-decoration-line: none;
+  color: var(--secondary-color);
+  display: inline-block;
+  padding-bottom: 0.625rem;
+  font-size: 1rem;
+  line-height: 1.625;
+  letter-spacing: 0.143em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text1);
+  text-decoration: none;
+  background-image: linear-gradient(to right,
+      var(--accent) 75%,
+      var(--accent) 75%);
+  background-position: 0 2.1em;
+  background-repeat: repeat-x;
+  background-size: 8px 2px;
+}
+
+.my-work ul li a:hover {
+  color: var(--accent);
+}
+
+.portfolio .see-more {
+  padding: 10px 20px;
+  border: 3px solid var(--accent);
+  transition: 0.3s;
+}
+
+.portfolio .see-more:hover {
+  background-color: var(--accent);
+}
+
+.see-more a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* from 1000px to 600px */
+@media (max-width: 1000px) {
+  .my-work ul {
+    position: static;
+    visibility: visible;
+  }
+
+  .my-work:hover ul {
+    visibility: visible;
+  }
+
+  .my-work:hover img {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 930px) and (min-width: 830px) {
+  .my-work .work-info h2 {
+    font-size: 28px;
+  }
+
+  .work-info .use {
+    gap: 10px;
+  }
+
+  .work-info .ul {
+    gap: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 830px) and (min-width: 768px) {
+  .my-work .work-info h2 {
+    font-size: 24px;
+  }
+
+  .work-info .use {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .two-works {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 490px) {
+  .portfolio>h1 {
+    font-size: 32px;
+  }
+
+  .my-work .work-info h2 {
+    font-size: 24px;
+  }
+
+  .work-info .use {
+    gap: 25px;
+  }
 }
