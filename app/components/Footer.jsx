@@ -18,8 +18,8 @@ const Footer = ({isDarkMode}) => {
             <p>@2025 Surafel Fikadu. All rights reserved.</p>
             <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
                 <li><a target='_blank' href="https://github.com/SurafelFikadu">GitHub</a></li>
-                <li><a target='_blank' href="https://github.com/SurafelFikadu">Linkdin</a></li>
-                <li><a target='_blank' href="https://github.com/SurafelFikadu">Twitter</a></li>
+                <li><a target='_blank' href="https://www.linkedin.com/in/surafelfikadu">Linkdin</a></li>
+                <li><a target='_blank' href="https://twitter.com/surafelfikad">Twitter</a></li>
             </ul>
         </div>
     </div>
